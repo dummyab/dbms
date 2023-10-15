@@ -1,0 +1,8 @@
+select * from student where USN in (select USN from Borrow
+group by USN having count(USN)>=2);
+
+
+select * from student s where exists (select br.USN from Borrow
+br join book bk on br.Bookid=bk.Bookid where br.USN=s.USN
+group by USN having count(disƟnct Authorid)>1);
+

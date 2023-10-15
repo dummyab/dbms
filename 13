@@ -1,0 +1,7 @@
+select * from student where Sem=2 and Branchid in (select
+Branchid from branch where bname='MCA');
+
+
+select * from student where USN not in (select USN from
+Borrow);
+

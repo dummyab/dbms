@@ -1,0 +1,10 @@
+MYSQL>create view salary as select salary from employees;
+select * from salary;
+
+
+
+MYSQL>create view salary1 as select salary from employees
+where superssn is not null with check opƟon;
+
+drop view salary1;
+select * from salary1;

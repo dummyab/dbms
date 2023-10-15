@@ -1,0 +1,10 @@
+select student.USN, student. Name, branch.bname,
+book.Bookname, author.Authorname, Borrow.Borrowed_Date
+from student, branch, book, author, Borrow where
+student.USN=Borrow.USN and Borrow.Bookid=book.Bookid and
+book.Authorid=author.Authorid and
+student.Branchid=branch.Branchid and student.Sem=2 and
+branch.bname='MCA';
+
+
+select count(*),Authorid from book group by Authorid;

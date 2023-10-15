@@ -1,0 +1,8 @@
+select Bookname from book order by Bookname desc;
+
+
+SELECT * FROM student s WHERE EXISTS (SELECT USN FROM
+Borrow br JOIN book bk ON br.Bookid = bk.Bookid WHERE s.USN
+= br.USN GROUP BY USN HAVING COUNT(DISTINCT Publisher) =
+1);
+
